@@ -1,0 +1,11 @@
+<% form_for @answers,:url => answers_path, :html => {:method => :post}   do |f| %>
+ <%= @poll.question %><br>
+ <%= f.radio_button :option, '1' %><%= @poll.option1 %><br> 
+ <%= f.radio_button :option, '2' %><%= @poll.option2 %><br>
+ <%= f.radio_button :option, '3' %><%= @poll.option3 %><br>
+ <%= f.submit%>
+ <%end%>
+
+
+
+ 

@@ -1,0 +1,24 @@
+<% form_for( @poll ) do |f| %>
+<h1> new poll </h1>
+<%= f.text_field :question %>
+<br>
+<label>Question</label>
+<br>
+<br>
+<%= f.text_field :option1 %>
+<br>
+<label>Option1</label>
+<br>
+<br>
+<%= f.text_field :option2 %>
+<br>
+<label>Option2</label>
+<br>
+<br>
+<%= f.text_field :option3 %>
+<br>
+<label>Option3</label>
+<br>
+<br>
+<%= f.submit %>
+<%end%>
