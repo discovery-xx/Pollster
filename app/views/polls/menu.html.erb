@@ -1,4 +1,7 @@
 <h1> menu </h1>
+<%= user_signed_in? %><%= session[:email]%><br>
 <%= link_to "existing polls", :controller => "polls", :action => "index" %>
 <br>
 <%= link_to "create new", :controller => "polls", :action => "new" %>
+<br>
+<%= link_to "Logout", {:controller => 'devise/sessions', :action => 'destroy'}, :method => :get %>

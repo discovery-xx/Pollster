@@ -1,4 +1,6 @@
 Pollster::Application.routes.draw do
+  devise_for :users
+
 resources :polls do
   collection do
     get 'input'
@@ -7,7 +9,8 @@ resources :polls do
   end
 end
 resources :answers
-  
+
+resources :users  
 # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,8 +60,8 @@ resources :answers
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "polls#input"
-
+  # root :to => "polls#menu"
+    root :to => "polls#menu"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

@@ -1,11 +1,13 @@
 class PollsController < ApplicationController
-  def input
+  before_filter :authenticate_user!
+  #def input
   #session[:email] = params
   #redirect_to :action => 'menu' 
-  end
+  #end
 
   def menu
-     session[:email] = params[:email][:email]   
+     
+    session[:email] = current_user.email #params[:user][:email]    
   end  
   
   def index
@@ -40,10 +42,15 @@ class PollsController < ApplicationController
      @answers = Answers.new
   end
   
-  def logout
+  #def logout
     #if params[:id] == "logoput"
-    session[:email]= nil
-    redirect_to :action => 'input'
+    #current_user = nil
+    #session[:email] = nil
+    #redirect_to :action => 'input'
+    #user_session :end
     #end
-  end
+   
+     
+   #end
 end
+

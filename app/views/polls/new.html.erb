@@ -22,3 +22,4 @@
 <br>
 <%= f.submit %>
 <%end%>
+<%= link_to "signout", {:controller => 'devise/sessions', :action => 'destroy'}, :method => :get %>

@@ -2,4 +2,4 @@
 <% @poll.each do |poll| %>
 <%= link_to "#{poll.question}", poll_path(poll.id) %> <br> 
 <% end %>
-<%= link_to "Logout", {:controller => 'polls', :action => 'logout'}, :method => :post %> 
+<%= link_to "signout", destroy_user_session_path %> 
