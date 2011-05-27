@@ -4,7 +4,7 @@ Pollster::Application.routes.draw do
 resources :polls do
   collection do
     get 'input'
-    post 'menu'
+    get  'menu'
     post 'logout'
   end
 end

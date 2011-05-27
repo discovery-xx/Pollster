@@ -2,5 +2,5 @@
 <%= @poll.option1 %>:<%= @poll.option1count %><br>
 <%= @poll.option2 %>:<%= @poll.option2count %><br>
 <%= @poll.option3 %>:<%= @poll.option3count %><br>
-<%= link_to "index", :controller => "polls", :action => "index" %><br>
+<%= link_to "menu",  menu_polls_path  %> 
 <%= link_to "signout", destroy_user_session_path %>
