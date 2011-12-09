@@ -1,5 +1,9 @@
+<%= javascript_include_tag :defaults %>
+<%require "reportbuilder"%>
 
 <% @poll.each do |poll| %>
 <%= link_to "#{poll.question}", poll_path(poll.id) %> <br> 
 <% end %>
-<%= link_to "signout", destroy_user_session_path %> 
+<%= link_to "view answered polls", :controller => 'polls', :action => 'answeredpolls' %><br>
+<%= link_to "signout", destroy_user_session_path %><br>
+<%= link_to "report", report_polls_path, :target => "" %>

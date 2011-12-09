@@ -1,11 +1,18 @@
 Pollster::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  #devise_for :admin_users, ActiveAdmin::Devise.config, ActiveAdmin::Devise.config
+
   devise_for :users
 
 resources :polls do
   collection do
     get 'input'
-    get  'menu'
-    post 'logout'
+    get 'menu'
+    get 'answeredpolls' 
+    get 'report'  
   end
 end
 resources :answers

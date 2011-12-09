@@ -7,6 +7,14 @@ gem 'rails', '3.0.7'
 
 gem 'mysql2', '< 0.3'
 gem 'devise'
+#gem 'ruport' 
+#gem 'ruport-util'
+gem 'reportbuilder', '~>1.4.1'
+gem 'guid'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'activeadmin'
+#gem 'factory-girl-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -4,4 +4,6 @@
 <br>
 <%= link_to "create new", :controller => "polls", :action => "new" %>
 <br>
+<%= link_to "view answered polls", :controller => 'polls', :action => 'answeredpolls' %>
+<br>
 <%= link_to "Logout", {:controller => 'devise/sessions', :action => 'destroy'}, :method => :get %>
